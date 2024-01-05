@@ -1,0 +1,64 @@
+#imageSession {
+    background-color: rgb(1, 45, 80);
+    height: 350px;
+}
+
+.sunimg {
+    position: absolute;
+    left: 550px;
+    width: 380px;
+    height: 290px;
+}
+
+.flash {
+    height: 54px;
+    width: 310px;
+    margin: 0px;
+    margin-left: 390px;
+    animation: fadeOut 5s forwards;
+    animation-delay: 5 s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.decorate1 {
+    position: absolute;
+    top: 255px;
+    left: 5px;
+    color: rgb(1, 45, 80);
+    width: 500px;
+    height: 95px;
+}
+
+.decorate2 {
+    position: absolute;
+    top: 255px;
+    left: 510px;
+    color: rgb(1, 45, 80);
+    width: 500px;
+    height: 95px;
+}
+
+.decorate3 {
+    position: absolute;
+    top: 255px;
+    left: 1015px;
+    color: rgb(1, 45, 80);
+    width: 500px;
+    height: 95px;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

@@ -1,0 +1,109 @@
+.white {
+    width: 550px;
+    height: 480px;
+    background-color: rgb(196, 198, 202);
+    position: absolute;
+    top: 400px;
+    left: 475px;
+    opacity: 0.7;
+    border-radius: 20px;
+    box-shadow: 10px 0px 10px 0px #021c73;
+
+}
+
+
+.heading {
+    position: absolute;
+    top: 230px;
+    left: 290px;
+    width: 400px;
+    color: rgb(0, 0, 0);
+    font-family: montserrat-black;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.input {
+    position: absolute;
+    top: 560px;
+    left: 550px;
+    width: 400px;
+    height: 50px;
+}
+
+
+.text {
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    box-shadow: 10px 0px 10px 0px #021c73;
+}
+
+
+.password {
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 80px;
+    box-shadow: 10px 0px 10px 0px #021c73;
+}
+
+.continue {
+    width: 225px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: rgb(130, 130, 130);
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 165px;
+    left: 90px;
+    box-shadow: 10px 0px 10px 0px #021c73;
+}
+
+.link {
+    position: absolute;
+    top: 820px;
+    left: 580px;
+    font-size: medium;
+}
+
+.linkColor:link {
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.icons {
+    position: absolute;
+    left: 580px;
+    top: 570px;
+    color: rgb(0, 0, 0);
+}
+
+.key {
+    position: relative;
+    top: 38px;
+}
+
+#content {
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+}

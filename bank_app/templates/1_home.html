@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="../static/css/1_home.css">
+{% endblock links %}
+
+{% block navbar %}
+
+    <li class="nav-item">
+        <button class="btn btn-success btn-sm">
+            <a class="nav-link text-dark " href="{{url_for('views.signIn')}}">Sign In</a>
+        </button>
+    </li>
+
+    <li>
+        <div style="width: 15px"></div>
+    </li>
+
+    <li class="nav-item">
+        <button class="btn btn-sm btn-outline-warning">
+            <a class="nav-link text-white " href="{{url_for('views.signUp')}}">Sign Up</a>
+        </button>
+    </li>
+
+{% endblock navbar %}
+
+{% block content %}
+    <div class="container-fuild">
+        <section id="middle">
+            <h2 class="details">Welcome !!!</h2><br>
+            <div class="box1"></div>
+            <div class="list">
+                <ul>
+                    <h4 class="about"><b>Special about us...</b></h4>
+                </ul>
+                <li><b>Welcome to Sun Bank</b>, where your financial goals become our mission. With a legacy of trust and a commitment to excellence, we have been serving our community and clients with integrity and dedication.</li><br>
+
+                <li>At <b>Sun Bank</b>, we understand that financial success is a journey, and we are here to guide you every step of the way. Whether you're looking for personalized banking solutions, investment advice, or mortgage options, our team of experienced
+                    professionals is ready to provide you with the expertise you need.</li><br>
+
+                <li>Our values are rooted in transparency, reliability, and customer satisfaction. We strive to create lasting relationships by putting our customers first and delivering innovative financial solutions tailored to your unique needs.</li><br>
+
+                <li>As a responsible corporate citizen, we are dedicated to contributing to the well-being of the communities we serve. Through various initiatives and partnerships, we aim to make a positive impact on society and promote financial literacy.</li><br>
+
+                <li>Discover the <b>Sun Bank</b> difference – where banking is not just a transaction, but a partnership for a prosperous future. Join us on your financial journey, and let's build a secure and successful tomorrow together.</li>
+            </div>
+
+            <div class="box2">
+                <div class="list2">
+                    <ol class="terms">
+                        <h4><b>Terms & Conditions:</b></h4>
+                    </ol>
+                    <div class="content">
+                        <li><b>Account Opening:</b><br> The account holder must provide accurate and up-to-date information during the account opening process. The bank reserves the right to refuse account opening without providing a reason.</li><br>
+
+                        <li> <b>Account Usage:</b><br> The account is for personal use only, and commercial use may require a different account type. The account holder is responsible for all transactions made using their account.</li><br>
+
+                        <li><b>Fees and Charges:</b><br> The bank may impose fees for various services, and the account holder is responsible for being aware of and paying these fees. Fees are subject to change, and the bank will notify the account holder
+                            of any changes in advance.</li><br>
+
+                        <li><b>Overdrafts and Limits:</b><br> Overdraft facilities may be available but are subject to approval, and fees may apply. The bank may set transaction limits on the account, and exceeding these limits may result in additional charges.</li><br>
+
+                        <li><b>Statement and Notifications:</b><br> The account holder will receive periodic statements detailing transactions and account balances. Notifications about important account information, changes, or alerts may be sent through
+                            electronic or physical means.</li><br>
+
+                        <li><b>Security:</b><br> The account holder is responsible for maintaining the security of account information, including passwords and PINs. Any unauthorized access or use of the account must be reported to the bank immediately.</li><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+{% endblock content %}

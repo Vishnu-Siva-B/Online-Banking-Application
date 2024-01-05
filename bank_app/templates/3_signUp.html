@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}SignUp Page{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="../static/css/3_signUp.css">
+{% endblock links %}
+
+{% block navbar %}
+
+    <li class="nav-item">
+        <button class="btn btn-success btn-sm">
+            <a class="nav-link text-dark " href="{{url_for('views.home')}}">Home</a>
+        </button>
+    </li>
+
+    <li>
+        <div style="width: 15px"></div>
+    </li>
+
+    <li class="nav-item">
+        <button class="btn btn-sm btn-outline-warning">
+            <a class="nav-link text-white " href="{{url_for('views.signIn')}}">Sign In</a>
+        </button>
+    </li>
+
+{% endblock navbar %}
+
+{% block content %}
+
+    <section id="signUp"></section>
+    <div>
+        <h3 class="heading">Create a Free Account now</h3>
+    </div>
+    <div class="main"></div>
+    <h3 class="main-head1">User Details</h3>
+
+    <form class="input" action="{{ url_for('views.signUp') }}" method="POST">
+
+        <input autocomplete="off" name="firstName" class="first text-dark" type="text" placeholder=" First Name" value="{{session['firstName'] if session['firstName']}}" required>
+        <input autocomplete="off" name="lastName" class="Last text-dark" type="text" placeholder=" Last Name" value="{{session['lastName'] if session['lastName']}}" required><br>
+        <input autocomplete="off" name="accNo" class="phone text-dark" type="text" placeholder=" Account No" value="{{session['accNo'] if session['accNo']}}" required><br>
+        <input autocomplete="off" name="email" class="mail text-dark" type="text" placeholder=" Email" value="{{session['email'] if session['email']}}" required><br>
+        <input autocomplete="off" name="city" class="city text-dark" type="text" placeholder=" City " value="{{session['city'] if session['city']}}" reqiured><br>
+        <input autocomplete="off" name="state" class="state text-dark" type="text" placeholder=" State " value="{{session['state'] if session['state']}}" reqiured><br>
+        <input autocomplete="off" name="country" class="country text-dark" type="text" placeholder=" country " value="{{session['country'] if session['country']}}" reqiured><br>
+        <input autocomplete="off" name="password" class="password text-dark" type="password" placeholder=" Password " value="{{session['password'] if session['password']}}" reqiured><br>
+        <input autocomplete="off" name="conPassword" class="Confirmpassword " type="password" placeholder="Confirm Password " value="{{session['conPassword'] if session['conPassword']}}" reqiured><br>
+        <button class="register" type="submit" onclick="scrollFlashUp()">Register</button>
+    </form>
+
+    <div class="icons">
+        <h3><i class="fa-regular fa-user" style="position: absolute; top:601px; left:445px;font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-regular fa-user" style="position: absolute; top:601px; left:848px;font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-money-check" style="position: absolute; top:682px; left:445px; font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-envelope" style="position: absolute; top:682px; left:745px; font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-house" style="position: absolute; top:765px; left:440px;font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-house" style="position: absolute; top:765px; left:650px;font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-globe" style="position: absolute; top:765px; left:880px;font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-key" style="position: absolute; top:850px; left:445px;font-size: 1.5rem; "></i></h3>
+        <h3><i class="fa-solid fa-key" style="position: absolute; top:850px; left:783px;font-size: 1.5rem; "></i></h3>
+    </div>
+
+    <script>
+        function scrollFlashUp() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+{% endblock content %}

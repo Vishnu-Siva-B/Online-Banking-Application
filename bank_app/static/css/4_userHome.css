@@ -1,0 +1,94 @@
+#middle {
+    background-color: rgb(255, 255, 255);
+    height: 800px;
+}
+
+.box {
+    width: 1100px;
+    height: 430px;
+    background-color: rgb(196, 198, 202);
+    position: absolute;
+    top: 750px;
+    left: 150px;
+    opacity: 0.7;
+    border-radius: 20px;
+    box-shadow: 10px 0px 10px 0px #021c73;
+}
+
+.contact {
+    font-size: 200px;
+    position: relative;
+    left: 90px;
+    top: -75px;
+    color: rgb(88, 87, 87);
+}
+
+.input {
+    position: absolute;
+    left: 90px;
+    top: 530px;
+    background-color: rgb(255, 255, 255);
+    border-style: hidden;
+    font-size: 25px;
+    font-family: montserrat-bold;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.eye {
+    position: absolute;
+    left: 100px;
+    top: 600px;
+    font-size: 20px;
+}
+
+.para {
+    position: absolute;
+    left: 140px;
+    top: 600px;
+    width: 400px;
+}
+
+.content {
+    position: relative;
+    left: 200px;
+    top: 150px;
+}
+
+.disp1,
+.disp2,
+.disp3 {
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 900;
+    font-family: montserrat-bold;
+    opacity: 0.7;
+    box-shadow: 10px 0px 10px 0px #021c73;
+    color: black;
+    border-style: hidden;
+    text-align: center;
+    border-radius: 50px;
+}
+
+hr {
+    position: relative;
+    top: 90px;
+}
+
+label {
+    font-size: 25px;
+    font-family: montserrat-bold;
+    font-weight: 900;
+}
+
+.second {
+    position: absolute;
+    top: -10px;
+    left: 600px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}

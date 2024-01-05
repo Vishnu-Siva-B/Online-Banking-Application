@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}SignIn Page{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="../static/css/2_signIn.css">
+{% endblock links %}
+
+{% block navbar %}
+
+    <li class="nav-item">
+        <button class="btn btn-success btn-sm">
+            <a class="nav-link text-dark " href="{{url_for('views.home')}}">Home</a>
+        </button>
+    </li>
+
+    <li>
+        <div style="width: 15px"></div>
+    </li>
+
+    <li class="nav-item">
+        <button class="btn btn-sm btn-outline-warning">
+            <a class="nav-link text-white " href="{{url_for('views.signUp')}}">Sign Up</a>
+        </button>
+    </li>
+
+{% endblock navbar %}
+
+{% block content %}
+    <section id="content">
+        <div class="white"></div>
+        <div class="heading">
+            <h3 class="heading">Login with your credentials</h3>
+        </div>
+
+        <form class="input" action="" method="post">
+            <input name="accNo" class="text text-black" autocomplete="off" type="text" placeholder=" Account Number" required><br>
+            <input name="password" class="password text-black" autocomplete="off" type="password" placeholder=" Password " reqiured>
+            <button class="continue" type="submit">Sign In</button>
+        </form>
+        <div class="link">
+            Don't have a SunBank account? <b><a class="linkColor" href="{{url_for('views.signUp')}}">Register here</a></b>.
+        </div><br>
+        <div class="icons">
+            <h3><i class="fa-solid fa-money-check"></i></h3>
+            <h3 class="key"><i class="fa-solid fa-key"></i></h3>
+        </div>
+
+    </section>
+
+{% endblock content %}

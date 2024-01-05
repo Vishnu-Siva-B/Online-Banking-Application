@@ -1,0 +1,213 @@
+#signUp {
+    background-color: rgb(255, 255, 255);
+    height: 1200px;
+}
+
+.heading {
+    position: absolute;
+    top: 370px;
+    left: 495px;
+    width: 550px;
+    color: rgb(0, 0, 0);
+    font-family: montserrat-black;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.main {
+    width: 800px;
+    height: 620px;
+    background-color: rgb(196, 198, 202);
+    position: absolute;
+    top: 450px;
+    left: 360px;
+    opacity: 0.7;
+    border-radius: 20px;
+    box-shadow: 10px 0px 10px 0px #021c73;
+}
+
+.main-head1 {
+    position: absolute;
+    top: 490px;
+    left: 400px;
+    font-size: 40px;
+    font-family: Montserrat-bold;
+    font-weight: 700;
+    color: rgb(37, 37, 37);
+}
+
+.input {
+    position: absolute;
+    top: 560px;
+    left: 550px;
+    width: 400px;
+    height: 50px;
+}
+
+.text {
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: rgb(2, 2, 68);
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    box-shadow: 7px 10px 7px 0px #4f4d4dc3;
+    position: absolute;
+    top: -50px;
+}
+
+.first {
+    width: 385px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 30px;
+    left: -130px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.Last {
+    width: 275px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 30px;
+    left: 275px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.phone {
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 110px;
+    left: -130px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.mail {
+    width: 383px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 110px;
+    left: 170px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.city {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 195px;
+    left: -130px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.state {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 195px;
+    left: 90px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.country {
+    width: 242px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 195px;
+    left: 310px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.password {
+    width: 320px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 280px;
+    left: -130px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.Confirmpassword {
+    width: 344px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 280px;
+    left: 210px;
+    box-shadow: 7px 10px 7px 0px #021c73;
+}
+
+.register {
+    width: 240px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+    background-color: rgb(130, 130, 130);
+    text-align: center;
+    font-size: 25px;
+    font-family: montserrat-black;
+    position: absolute;
+    top: 400px;
+    left: 75px;
+    box-shadow: 10px 0px 10px 0px #021c73;
+}
+
+a {
+    color: black;
+}

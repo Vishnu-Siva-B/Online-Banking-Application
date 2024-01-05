@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block title %}Withdrawal{% endblock title %} {% block links %}
+    <link rel="stylesheet" type="text/css" href="../static/css/amount.css"> {% endblock links %} {% block navbar %}
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('views.userHome')}}">User Details</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('views.transactionHistory')}}">Transaction History</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('views.deposit')}}">Deposit</a>
+        </li>
+
+        <li class="nav-item">
+            <form>
+                <button class="btn btn-sm btn-outline-danger">
+                    <a class="nav-link" href="{{url_for('views.signOut')}}">LogOut</a>
+                </button>
+            </form>
+
+        </li>
+
+    {% endblock navbar %}
+
+{% block content %}
+
+    <section id="content">
+        <div class="white"></div>
+        <div class="heading">
+            <h2 class="heading">Withdrawal Details</h2>
+        </div>
+
+        <form class="input" action="" method="post">
+            <input name="amt" class="text text-black" autocomplete="off" type="text" placeholder=" Amount" required><br>
+            <input name="password" class="password text-black" autocomplete="off" type="password" placeholder=" Password " reqiured>
+            <button class="continue" type="submit">Withdraw</button>
+        </form>
+
+        <div class="icons">
+            <h3><i class="fa-solid fa-indian-rupee-sign"></i></h3>
+            <h3 class="key"><i class="fa-solid fa-key"></i></h3>
+        </div>
+
+    </section>
+
+{% endblock content %}

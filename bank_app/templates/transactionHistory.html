@@ -1,0 +1,73 @@
+{% extends "base.html" %} {% block title %}Transaction History{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="../static/css/transactionHistory.css">
+{% endblock links %} {% block navbar %}
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('views.userHome')}}">User Details</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('views.withdrawal')}}">Withdrawal</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('views.deposit')}}">Deposit</a>
+    </li>
+
+    <li class="nav-item">
+        <form>
+            <button class="btn btn-sm btn-outline-danger">
+                <a class="nav-link" href="{{url_for('views.signOut')}}">LogOut</a>
+            </button>
+        </form>
+    </li>
+
+{% endblock navbar %}
+
+{% block content %}
+
+    <section id="content">
+        <div class="heading">
+            <h1 class="topic">Transaction History</h1>
+        </div>
+    </section>
+
+    <div class="white"></div>
+    <form class="head">
+        <label class="font"><b>Account Number:</b></label>
+        <input class="boxing" type="text" style="width: 400px;height: 50px;" value="{{user_details['accNo']}}" readonly><br>
+        <label class="font2"><b> User Name:</b></label>
+        <input class="boxing" type="text" style="width: 400px;height: 50px;" value="{{user_details['firstName']+user_details['lastName']}}" readonly><br>
+        <label class="font"><b>Account Balance:</b></label>
+        <input class="boxing" type="text" style="width: 400px;height: 50px;" value="₹{{user_details['balance']}}" readonly><br>
+    </form>
+
+
+    <section id="table">
+        <div class="container">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr class="bg-secondary text-white">
+                        <td>Timestamp</td>
+                        <td>Description</td>
+                        <td>Amount</td>
+                        <td>Bank Balance</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction['timestamp'] }}</td>
+                            <td>{{ transaction['description'] }}</td>
+                            <td>₹{{ transaction['amount'] }}</td>
+                            <td>₹{{ transaction['balance'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+{% endblock content %}

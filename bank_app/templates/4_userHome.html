@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}User Home{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="../static/css/4_userHome.css">
+{% endblock links %}
+
+{% block navbar %}
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('views.transactionHistory')}}">Transaction History</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('views.withdrawal')}}">Withdrawal</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('views.deposit')}}">Deposit</a>
+    </li>
+
+    <li class="nav-item">
+        <form>
+            <button class="btn btn-sm btn-outline-danger">
+                <a class="nav-link" href="{{url_for('views.signOut')}}">LogOut</a>
+            </button>
+        </form>
+
+    </li>
+
+{% endblock navbar %}
+
+{% block content %}
+
+    <section id="middle">
+        <div>
+            <h1 class="contact"><i class="fa-solid fa-circle-user"></i></h1>
+        </div>
+        <div>
+            <form>
+                <input class="input" type="text" style="width: 300px; height: 50px; text-align: left;" value="       Welcome {{user_details['firstName']}},">
+            </form>
+        </div>
+        <div>
+            <h3 class="eye"><i class="fa-solid fa-eye-slash"></i></h3>
+            <p class="para">Your profile information only visible to you. Only your username is visible to others on <b><a style='color: black; text-decoration: none;' href="{{url_for('views.home')}}">Sun
+                Bank</a></b></p><br>
+        </div>
+        <hr>
+        <div class="box"></div>
+
+        <div class="content">
+            <form>
+                <label><b>Full Name:</b></label><br>
+                <input class="disp1" type="text" style="width: 400px; height: 50px;" value="{{user_details['firstName']+user_details['lastName']}}" readonly><br>
+                <label><b>Account No:</b></label><br>
+                <input class="disp2" type="text" style="width: 400px; height: 50px;" value="{{user_details['accNo']}}" readonly><br>
+                <label><b>Email Id:</b></label><br>
+                <input class="disp3" type="text" style="width: 400px; height: 50px;" value="{{user_details['email']}}" readonly><br>
+            </form>
+            <form class="second">
+                <label><b>City:</b></label><br>
+                <input class="disp3" type="text" style="width: 400px; height: 50px;" value="{{user_details['city']}}" readonly><br>
+                <label><b>State:</b></label><br>
+                <input class="disp3" type="text" style="width: 400px; height: 50px;" value="{{user_details['state']}}" readonly><br>
+                <label><b>Country:</b></label><br>
+                <input class="disp3" type="text" style="width: 400px; height: 50px;" value="{{user_details['country']}}" readonly><br>
+            </form>
+        </div>
+    </section>
+    <div style="height:100px;"></div>
+
+
+{% endblock content %}

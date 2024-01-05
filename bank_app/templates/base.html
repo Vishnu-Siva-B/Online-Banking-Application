@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Set the character encoding and viewport for responsive design -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Set the title of the HTML page, allowing for block-level customization -->
+        <title>{% block title %}{% endblock title %}</title>
+        <!-- Include Bootstrap CSS from CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <!-- Include Font Awesome CSS from CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <!-- Include custom base CSS file -->
+        <link rel="stylesheet" href="../static/css/base.css">
+        <!-- Allow for block-level customization of additional links in the head -->
+        {% block links %} {% endblock links %}
+    </head>
+
+    <body>
+        <!-- Section for the image, typically a logo -->
+        <section id="imageSession">
+            <img src="../static/images/bankLogo1.jpg" alt="logo" class="sunimg">
+        </section>
+
+        <!-- Container for the entire body content -->
+        <div class="container-fuild ahider">
+
+            <!-- Navbar section -->
+            <div class="navbar ashower">
+                <nav class="navbar navbar-expand-sm ">
+                    <!-- Logo in the navbar -->
+                    <a class="navbar-brand">
+                        <img src="../static/images/bankLogo1.jpg" alt="logo" style="width: 60px; border-radius: 100%;">
+                    </a>
+                    <!-- Brand name -->
+                    <a class="navbar-brand text-white">SUN BANK</a>
+
+                    <!-- Navbar toggle button for small screens -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+
+                    <!-- Flash messages container -->
+                    <div class="flash">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                        <!-- Iterate through flashed messages and display them as alerts -->
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Allow for block-level customization of navbar contents -->
+                            {% block navbar %}
+                            <!-- Navbar contents go here -->
+                            {% endblock navbar %}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Decorative images -->
+            <div class="decoration">
+                <img class="decorate1" src="../static/images/Indian-Monuments-PNG.jpg" alt="black">
+                <img class="decorate2" src="../static/images/Indian-Monuments-PNG.jpg" alt="black">
+                <img class="decorate3" src="../static/images/Indian-Monuments-PNG.jpg" alt="black">
+            </div>
+
+            <!-- Allow for block-level customization of content -->
+            {% block content %} {% endblock content %}
+
+            <!-- Include jQuery, Popper.js, and Bootstrap JS from CDNs -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </body>
+
+</html>
